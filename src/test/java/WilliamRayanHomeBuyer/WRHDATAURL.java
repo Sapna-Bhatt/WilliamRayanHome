@@ -14,7 +14,7 @@ package WilliamRayanHomeBuyer;
 		    public static Properties prop;
 		    public static WebDriver driver;
 			public WilliamRayanHomeBuyerAuto WRH;
-			public void ABC()
+			public void BUYER()
 			{				
 				WRH = new WilliamRayanHomeBuyerAuto (driver);
 			}

@@ -1,6 +1,4 @@
 package WilliamRayanHomeBuyer;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -131,12 +129,23 @@ public class WilliamRayanHomeBuyerAuto extends WRHDATAURL {
        @FindBy(xpath= "//button[normalize-space()='Save']")
      		public WebElement  saveissue;
 
-        
-        
-        
-        
-        
-        
+        //Logout and Chnage Home
+       @FindBy(xpath= "//button[@type='button']//div//*[name()='svg']")
+		public WebElement  clicklogout;
+       @FindBy(xpath= "//span[normalize-space()='Change Home']")
+  		public WebElement  changeHome;
+       @FindBy(xpath= "//span[normalize-space()='Log ']")
+ 		public WebElement  Logout;
+       @FindBy(xpath= "//button[normalize-space()='Log Out']")
+  		public WebElement logoutconformation ;
+     //Forgot password
+          
+       @FindBy(xpath= "//a[normalize-space()='Forgot password?']")
+  		public WebElement  Forgotpassword;
+       @FindBy(xpath= "//input[@type='email']")
+ 		public WebElement  Enteremail;
+       @FindBy(xpath= "//button[@type='submit']")
+   		public WebElement  setRestInstruction;
 
         
 
