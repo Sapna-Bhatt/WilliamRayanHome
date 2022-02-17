@@ -21,7 +21,7 @@ public class WilliamRayanHomeBuyerAuto extends WRHDATAURL {
 		public WebElement submitbtn;
 	    @FindBy(id = "signInSubmit")
 		public WebElement submitBtn;
-	    @FindBy(xpath = "//a[normalize-space()='View Timeline']")
+	    @FindBy(xpath = "//a[contains(text(),'View Timeline')]")
 		public WebElement viewtimeline;
 	    @FindBy(xpath = "//a[normalize-space()='Dashboard']")
 	    public WebElement Dashboard;
@@ -50,7 +50,7 @@ public class WilliamRayanHomeBuyerAuto extends WRHDATAURL {
 		//Message
 		@FindBy(xpath = "//a[normalize-space()='My Messages']")
 		public WebElement Message;
-		@FindBy(xpath = "//div[contains(text(),'No Announcements Found')]")
+		@FindBy(xpath = "//main//div//div[1]//a[1]")
 		public WebElement Announcements;
 		@FindBy(tagName="div")
 		public WebElement Conversations;
@@ -58,7 +58,7 @@ public class WilliamRayanHomeBuyerAuto extends WRHDATAURL {
 		public WebElement clickdropdown;
 		@FindBy(xpath = "//li[normalize-space()='Brad Berish']")
 		public WebElement selectdropdown;
-		@FindBy(xpath = "//div//div//div//div//div[2]//a[1]")
+		@FindBy(xpath = "//body//div[@id='app']//div//div//div//div[2]//a[1]")
 		public WebElement converstnxyz;
 		@FindBy(xpath = "//input[@type='text']")
 		public WebElement hello;
@@ -74,7 +74,7 @@ public class WilliamRayanHomeBuyerAuto extends WRHDATAURL {
 		//My Document
 		@FindBy(xpath = "//a[normalize-space()='My Documents']")
 		public WebElement MyDocument;
-		@FindBy(xpath = "//i[@title='Download File']//*[name()='svg']")
+		@FindBy(xpath = "//body[1]/div[1]/div[1]/section[1]/main[1]/div[1]/section[1]/div[1]/div[1]/div[1]/aside[1]/button[1]")
 		public WebElement Download;
 		@FindBy(xpath= "//i[@title='View File']//*[name()='svg']")
 		public WebElement  ViewDocument;
@@ -85,7 +85,7 @@ public class WilliamRayanHomeBuyerAuto extends WRHDATAURL {
 		public WebElement Myaccount;
 		@FindBy(css = "body div li:nth-child(1)")
 		public WebElement viewcontactinfo;
-		@FindBy(css = "body div li:nth-child(2)")
+		@FindBy(xpath = "//li[normalize-space()='Change My Password']")
 		public WebElement changepassword;
 		@FindBy(xpath = "//input[@id='oldPass']")
 		public WebElement oldpassword;
@@ -97,19 +97,19 @@ public class WilliamRayanHomeBuyerAuto extends WRHDATAURL {
 		public WebElement savepassword;
 		@FindBy(xpath= "//li[normalize-space()='Add Additional User']")
 		public WebElement AdditionalUser;
-		@FindBy(xpath= "//div//div//div//div//div[1]//input[1]")
+		@FindBy(xpath= "//input[@id='userFirstName']")
 		public WebElement Firstname;
-		@FindBy(xpath= "//div//div//div//div//div//div//div[2]//input[1]")
+		@FindBy(xpath= "//input[@id='userLastName']")
 		public WebElement Lastname;
-		@FindBy(xpath= "//div[3]//input[1]")
+		@FindBy(xpath= "//input[@id='Phone']")
 		public WebElement Phonenumber;
-         @FindBy(xpath= "//div[4]//input[1]")
+         @FindBy(xpath= "//input[@id='email']")
 		public WebElement EmailAddress; 
-        @FindBy(xpath= "//button[normalize-space()='Add Additional User']")
+        @FindBy(xpath= "//button[contains(text(),'Add Additional User')]")
 		public WebElement  saveAdditionalUser;
-        @FindBy(xpath= "//li[normalize-space()='Transfer Warranty']")
+        @FindBy(xpath= "//li[contains(text(),'Transfer Warranty')]")
       		public WebElement  TransferWarranty;
-        @FindBy(xpath= "//body/div/div/section/main/div/div[2]/div[1]//*[name()='svg']")
+        @FindBy(css= "#Close")
   		public WebElement  passwordpopup;
         @FindBy(xpath= "//a[normalize-space()='Warranty']")
         //warranty
@@ -120,17 +120,25 @@ public class WilliamRayanHomeBuyerAuto extends WRHDATAURL {
      		public WebElement  sixtyDAYS;
        @FindBy(xpath= "//button[normalize-space()='+ Add Issue']")
      		public WebElement  AddIssue;
-       @FindBy(xpath= "//*[name()='path' and contains(@d,'M 3 3 L 3 ')]")
+       @FindBy(xpath= "//label[@for='uploadImage']//*[name()='svg']")
      		public WebElement  Addfile;
        @FindBy(xpath= "//input[@type='text']")
      		public WebElement  Tittleissue;
-       @FindBy(xpath="//body//div//div//section//main//div//div//section//div//div//div//div//form//textarea")
+       @FindBy(xpath="//textarea[@id='describeIssue']")
      		public WebElement  Describeissue;
        @FindBy(xpath= "//button[normalize-space()='Save']")
      		public WebElement  saveissue;
+       //Edit in Warranty
+       @FindBy(css= "#Capa_1")
+ 		public WebElement  Editwarranty;
+       @FindBy(xpath= "//body//div//div//div//div//div//div//li[2]//*[name()='svg']")
+		public WebElement  deletewarranty;
+       @FindBy(xpath= "//body//div//div//div//div//div//div//ul//button[2]")
+		public WebElement  Deleteconwarrnty;
+        
 
         //Logout and Chnage Home
-       @FindBy(xpath= "//button[@type='button']//div//*[name()='svg']")
+       @FindBy(xpath= "//header/div[1]/button[1]/div[1]/*[1]")
 		public WebElement  clicklogout;
        @FindBy(xpath= "//span[normalize-space()='Change Home']")
   		public WebElement  changeHome;
