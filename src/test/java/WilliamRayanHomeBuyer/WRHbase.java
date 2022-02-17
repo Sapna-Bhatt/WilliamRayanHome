@@ -44,7 +44,8 @@ public class WRHbase {
 			}
 				
 			driver.manage().window().maximize(); 
-			 driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			
+			 driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 	    }
 }
 	  
