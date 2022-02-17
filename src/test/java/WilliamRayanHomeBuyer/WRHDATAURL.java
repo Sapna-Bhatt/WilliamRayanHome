@@ -14,7 +14,7 @@ package WilliamRayanHomeBuyer;
 		    public static Properties prop;
 		    public static WebDriver driver;
 			public WilliamRayanHomeBuyerAuto WRH;
-			public void BUYER()
+			public void BUYERDRIVER()
 			{				
 				WRH = new WilliamRayanHomeBuyerAuto (driver);
 			}
@@ -42,15 +42,42 @@ package WilliamRayanHomeBuyer;
 					System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");	
 					driver = new FirefoxDriver(); 
 				}else if(browserName.equals("Edge")){
-					System.setProperty("webdriver.edge.driver", "D:\\Selenium\\Edgedriver_exe\\msedgedriver.exe");	
+					System.setProperty("webdriver.edge.driver", "D:\\msedgedriver.exe");	
 					driver = new EdgeDriver(); 
 				}
 					
 				driver.get(prop.getProperty("URL_1"));
 				driver.manage().window().maximize(); 
-				 driver.manage().timeouts().implicitlyWait(20000, TimeUnit.SECONDS);
+				 driver.manage().timeouts().implicitlyWait(80000, TimeUnit.SECONDS);
 		    }
-	}
+		    
+		    
+		    public void loginuser() 
+		    {
+				String usertype = prop.getProperty("Home");
+
+		    	
+		    if (usertype.equals("LStoutenburg@yopmail.com"))
+		    {
+		    	  WRH.Email.sendKeys("LStoutenburg@yopmail.com");
+		  		  WRH.password.sendKeys("Abc@1234");
+					WRH.submitbtn.click(); 
+
+		    }
+		    else if(usertype.equals("bradberish@yopmail.com"))
+		    {
+		    	WRH.Email.sendKeys("bradberish@yopmail.com");
+		  		  WRH.password.sendKeys("Abc@1234");
+		  		  
+					WRH.submitbtn.click(); 
+					WRH.multiplehome.click();
+
+		    	
+		    }
+
+	}}
+	
+	
 		  
 	      
 
